@@ -98,6 +98,8 @@ a{color:var(--brand);text-decoration:none}
 .block .tc{color:var(--brand)}
 /* 公式 */
 .block mjx-container[display="true"]{margin:.7em 0}
+/* 手机端: 超宽的显示公式(矩阵/cases等)可在公式内左右滑动查看 */
+.block .bb mjx-container[display="true"]{display:block;max-width:100%;overflow-x:auto;overflow-y:hidden;padding:2px 3px;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
 /* 提示框 */
 .box{border-radius:10px;padding:10px 14px 12px;margin:.6em 0;border:1px solid}
 .box-tip{background:#eff6ff;border-color:#bfdbfe}
@@ -126,6 +128,11 @@ tr.tb-rule td{border:0;height:0;padding:0}
 @media (max-width:900px){
   #main{padding:18px 14px 60px}
   .hero h1{font-size:22px}
+}
+@media (max-width:560px){
+  #topbar{gap:8px;padding:0 10px}
+  #topbar .logo{font-size:14px}
+  #topbar #btnExpand,#topbar #btnHome{padding:5px 8px;font-size:12px}
 }
 </style>
 </head>
